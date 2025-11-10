@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARAMCO System Navigation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-blue-900 text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">ARAMCO Management System Navigation</h1>
+      <button class="bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded-lg text-sm">Logout</button>
+    </div>
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav class="bg-blue-800 text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-2">
+      <div class="flex justify-between items-center">
+        <div class="hidden md:flex space-x-4">
+          <a href="SUPR.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Super Admin</a>
+          <a href="main.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Main Admin</a>
+          <a href="supply.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Supply Admin</a>
+          <a href="account.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Account Admin</a>
+          <a href="employee.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Employee</a>
+          <a href="roomcoordinator.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Room Coordinator</a>
+          <a href="empregestration.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Emp Registration</a>
+          <a href="car.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Car Rental</a>
+          <a href="index.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Learning Assure</a>
+          <a href="navigation.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Navigation</a>
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-white focus:outline-none hover:bg-blue-700 p-2 rounded">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden mt-2 space-y-1">
+        <a href="SUPR.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Super Admin</a>
+        <a href="main.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Main Admin</a>
+        <a href="supply.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Supply Admin</a>
+        <a href="account.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Account Admin</a>
+        <a href="employee.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Employee</a>
+        <a href="roomcoordinator.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Room Coordinator</a>
+        <a href="empregestration.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Emp Registration</a>
+        <a href="car.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Car Rental</a>
+        <a href="index.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Learning Assure</a>
+        <a href="navigation.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Navigation</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto p-6">
+
+    <!-- Admin Panels Section -->
+    <section class="bg-white rounded-2xl shadow p-6 mb-6">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-800">Admin Panels</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="border rounded-lg p-4 hover:bg-blue-50">
+          <h3 class="font-semibold text-lg">Super Admin Panel</h3>
+          <p class="text-gray-600 mb-2">Manage admins, cash logs, profits</p>
+          <a href="SUPR.html" class="text-blue-600 hover:underline">Go to SUPR.html</a>
+          <div class="mt-2 text-sm">
+            <strong>Key Buttons:</strong> Add New Admin, Allot Money, Edit/Remove Admins
+          </div>
+        </div>
+        <div class="border rounded-lg p-4 hover:bg-blue-50">
+          <h3 class="font-semibold text-lg">Main Admin Panel</h3>
+          <p class="text-gray-600 mb-2">Employee management, credits, recruits</p>
+          <a href="main.html" class="text-blue-600 hover:underline">Go to main.html</a>
+          <div class="mt-2 text-sm">
+            <strong>Key Buttons:</strong> Add Employee, Update Credit, Submit (Recruit/Car), Add Building
+          </div>
+        </div>
+        <div class="border rounded-lg p-4 hover:bg-blue-50">
+          <h3 class="font-semibold text-lg">Supply Admin Panel</h3>
+          <p class="text-gray-600 mb-2">Manage employees, allot/borrow</p>
+          <a href="supply.html" class="text-blue-600 hover:underline">Go to supply.html</a>
+          <div class="mt-2 text-sm">
+            <strong>Key Buttons:</strong> Add Employee, Submit (Allot/Borrow)
+          </div>
+        </div>
+        <div class="border rounded-lg p-4 hover:bg-blue-50">
+          <h3 class="font-semibold text-lg">Account Admin Panel</h3>
+          <p class="text-gray-600 mb-2">Expense/income management, invoices</p>
+          <a href="account.html" class="text-blue-600 hover:underline">Go to account.html</a>
+          <div class="mt-2 text-sm">
+            <strong>Key Buttons:</strong> Add Expense, Add Income, Submit (Invoice)
+          </div>
+        </div>
+        <div class="border rounded-lg p-4 hover:bg-blue-50">
+          <h3 class="font-semibold text-lg">Employee Panel</h3>
+          <p class="text-gray-600 mb-2">Profile, status update, announcements</p>
+          <a href="employee.html" class="text-blue-600 hover:underline">Go to employee.html</a>
+          <div class="mt-2 text-sm">
+            <strong>Key Buttons:</strong> Update Status
+          </div>
+        </div>
+        <div class="border rounded-lg p-4 hover:bg-blue-50">
+          <h3 class="font-semibold text-lg">Room Coordinator Panel</h3>
+          <p class="text-gray-600 mb-2">Room management, status updates</p>
+          <a href="roomcoordinator.html" class="text-blue-600 hover:underline">Go to roomcoordinator.html</a>
+          <div class="mt-2 text-sm">
+            <strong>Key Buttons:</strong> Add New Room, Update Status
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Forms and Standalone Pages Section -->
+    <section class="bg-white rounded-2xl shadow p-6 mb-6">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-800">Forms and Standalone Pages</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="border rounded-lg p-4 hover:bg-blue-50">
+          <h3 class="font-semibold text-lg">Employee Registration</h3>
+          <p class="text-gray-600 mb-2">Register new employees</p>
+          <a href="empregestration.html" class="text-blue-600 hover:underline">Go to empregestration.html</a>
+          <div class="mt-2 text-sm">
+            <strong>Key Buttons:</strong> Register Employee
+          </div>
+        </div>
+        <div class="border rounded-lg p-4 hover:bg-blue-50">
+          <h3 class="font-semibold text-lg">Car Rental</h3>
+          <p class="text-gray-600 mb-2">Add new car rentals</p>
+          <a href="car.html" class="text-blue-600 hover:underline">Go to car.html</a>
+          <div class="mt-2 text-sm">
+            <strong>Key Buttons:</strong> Save Rental Record
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Other Pages Section -->
+    <section class="bg-white rounded-2xl shadow p-6">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-800">Other Pages</h2>
+      <div class="grid grid-cols-1 gap-4">
+        <div class="border rounded-lg p-4 hover:bg-blue-50">
+          <h3 class="font-semibold text-lg">Learning Assure LMS</h3>
+          <p class="text-gray-600 mb-2">Learning management system (separate from ARAMCO)</p>
+          <a href="index.html" class="text-blue-600 hover:underline">Go to index.html</a>
+          <div class="mt-2 text-sm">
+            <strong>Key Buttons:</strong> Explore Courses, Enroll Now
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Access Buttons -->
+    <section class="bg-white rounded-2xl shadow p-6 mt-6">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-800">Quick Access to Common Actions</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="empregestration.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 text-center">Register Employee</a>
+        <a href="car.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 text-center">Add Car Rental</a>
+        <a href="supply.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 text-center">Manage Supply</a>
+        <a href="account.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 text-center">Manage Accounts</a>
+        <a href="main.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 text-center">Main Admin</a>
+        <a href="SUPR.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 text-center">Super Admin</a>
+        <a href="employee.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 text-center">Employee Panel</a>
+        <a href="roomcoordinator.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 text-center">Room Coordinator</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
+  </script>
+</body>
+</html>

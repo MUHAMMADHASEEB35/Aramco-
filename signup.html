@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARAMCO Management System - Sign Up</title>
+  <style>
+    /* ---------- Global Page Styling ---------- */
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f4f6fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .signup-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      color: #003399;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    /* ---------- Signup Box ---------- */
+    .signup-box {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      padding: 30px;
+      position: relative;
+    }
+
+    h2 {
+      text-align: center;
+      color: #002b80;
+      margin-bottom: 20px;
+    }
+
+    form label {
+      font-weight: 600;
+      color: #333;
+    }
+
+    form select,
+    form input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    form button {
+      width: 100%;
+      background-color: #003399;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background-color: #002b80;
+    }
+
+    .message {
+      text-align: center;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .login-link a {
+      text-decoration: none;
+      color: #003399;
+      font-size: 14px;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h1>ARAMCO Management System</h1>
+    <div class="signup-box">
+      <h2>Sign Up</h2>
+      <form id="signupForm">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" placeholder="Enter your full name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+
+        <label for="role">Select Role:</label>
+        <select id="role" required>
+          <option value="">-- Select Role --</option>
+          <option value="superadmin">Super Admin</option>
+          <option value="mainadmin">Main Admin</option>
+          <option value="accountadmin">Account Admin</option>
+          <option value="supplyadmin">Supply Admin</option>
+          <option value="roomcoordinator">Room Coordinator Employee</option>
+          <option value="employee">Employee</option>
+        </select>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter password" required />
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" placeholder="Confirm password" required />
+
+        <button type="submit">Sign Up</button>
+
+        <p id="message" class="message"></p>
+      </form>
+
+      <p class="login-link">
+        Already have an account? <a href="login.html">Login</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('signupForm');
+    const message = document.getElementById('message');
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const fullName = document.getElementById('fullName').value;
+      const email = document.getElementById('email').value;
+      const role = document.getElementById('role').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+
+      if (password !== confirmPassword) {
+        message.style.color = "red";
+        message.textContent = "❌ Passwords do not match.";
+        return;
+      }
+
+      if (password.length < 6) {
+        message.style.color = "red";
+        message.textContent = "❌ Password must be at least 6 characters long.";
+        return;
+      }
+
+      // Simulate successful signup
+      localStorage.setItem('loggedIn', 'true');
+      localStorage.setItem('role', role);
+      message.style.color = "#0a8901";
+      message.textContent = "✅ Account created successfully! Redirecting to your dashboard...";
+      setTimeout(() => {
+        // Redirect based on role
+        if (role === 'superadmin') {
+          window.location.href = "SUPR.html";
+        } else if (role === 'mainadmin') {
+          window.location.href = "main.html";
+        } else if (role === 'accountadmin') {
+          window.location.href = "account.html";
+        } else if (role === 'supplyadmin') {
+          window.location.href = "supply.html";
+        } else if (role === 'roomcoordinator') {
+          window.location.href = "roomcoordinator.html";
+        } else if (role === 'employee') {
+          window.location.href = "employee.html";
+        } else {
+          window.location.href = "login.html"; // Fallback
+        }
+      }, 2000);
+    });
+  </script>
+</body>
+</html>

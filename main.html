@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Main Admin | ARAMCO</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-blue-900 text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">ARAMCO Main Admin Panel</h1>
+      <button class="bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded-lg text-sm">Logout</button>
+    </div>
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav class="bg-blue-800 text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-2">
+      <div class="flex justify-between items-center">
+        <div class="hidden md:flex space-x-4">
+          <!-- <a href="SUPR.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Super Admin</a> -->
+          <a href="main.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Main Admin</a>
+          <!-- <a href="supply.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Supply Admin</a> -->
+          <!-- <a href="account.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Account Admin</a> -->
+          <a href="employee.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Employee</a>
+          <!-- <a href="roomcoordinator.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Room Coordinator</a> -->
+          <a href="empregestration.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Emp Registration</a>
+          <a href="car.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Car Rental</a>
+          <!-- <a href="navigation.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Navigation</a> -->
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-white focus:outline-none hover:bg-blue-700 p-2 rounded">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden mt-2 space-y-1">
+        <!-- <a href="SUPR.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Super Admin</a> -->
+        <a href="main.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Main Admin</a>
+        <!-- <a href="supply.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Supply Admin</a> -->
+        <!-- <a href="account.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Account Admin</a> -->
+        <!-- <a href="employee.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Employee</a> -->
+        <!-- <a href="roomcoordinator.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Room Coordinator</a> -->
+        <a href="empregestration.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Emp Registration</a>
+        <a href="car.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Car Rental</a>
+        <!-- <a href="index.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Learning Assure</a> -->
+        <!-- <a href="navigation.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Navigation</a> -->
+      </div>
+    </div>
+  </nav>
+
+  <div class="flex">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow-lg h-screen p-5 hidden md:block">
+      <nav class="space-y-2">
+        <h2 class="text-gray-600 font-semibold mb-3">Main Admin Menu</h2>
+        <button class="block w-full text-left px-3 py-2 rounded-lg hover:bg-blue-100" data-section="dashboard">Dashboard</button>
+        <button class="block w-full text-left px-3 py-2 rounded-lg hover:bg-blue-100" data-section="employee">Employee Management</button>
+        <button class="block w-full text-left px-3 py-2 rounded-lg hover:bg-blue-100" data-section="credit">Credit Management</button>
+        <button class="block w-full text-left px-3 py-2 rounded-lg hover:bg-blue-100" data-section="recruit">New Recruit Form</button>
+        <button class="block w-full text-left px-3 py-2 rounded-lg hover:bg-blue-100" data-section="car">Car Rental Form</button>
+        <button class="block w-full text-left px-3 py-2 rounded-lg hover:bg-blue-100" data-section="building">Building Accommodation</button>
+        <button class="block w-full text-left px-3 py-2 rounded-lg hover:bg-blue-100" data-section="tax">Tax Deduction</button>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6 overflow-y-auto">
+      
+      <!-- DASHBOARD -->
+      <section id="dashboard" class="section">
+        <h2 class="text-2xl font-semibold mb-4">Main Admin Dashboard</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <div class="bg-white p-4 rounded-2xl shadow">
+            <h3 class="text-gray-600">Employees</h3>
+            <p class="text-2xl font-bold text-blue-600">124</p>
+          </div>
+          <div class="bg-white p-4 rounded-2xl shadow">
+            <h3 class="text-gray-600">Credits Issued</h3>
+            <p class="text-2xl font-bold text-green-600">$12,400</p>
+          </div>
+          <div class="bg-white p-4 rounded-2xl shadow">
+            <h3 class="text-gray-600">Remaining Fund</h3>
+            <p class="text-2xl font-bold text-orange-600">$8,600</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- EMPLOYEE MANAGEMENT -->
+      <section id="employee" class="section hidden bg-white rounded-2xl shadow p-6 mb-6">
+        <div class="flex justify-between items-center mb-3">
+          <h3 class="text-lg font-semibold">Employee Management</h3>
+          <button id="addEmployeeBtn" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Add Employee</button>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead class="bg-gray-100">
+              <tr>
+                <th class="p-3 border-b">Name</th>
+                <th class="p-3 border-b">Position</th>
+                <th class="p-3 border-b">Salary</th>
+                <th class="p-3 border-b">Extra Tax (%)</th>
+                <th class="p-3 border-b">Extra Tax Amount</th>
+                <th class="p-3 border-b">VAT (%)</th>
+                <th class="p-3 border-b">VAT Amount</th>
+                <th class="p-3 border-b">Status</th>
+                <th class="p-3 border-b">Actions</th>
+              </tr>
+            </thead>
+          <tbody id="employeeTableBody">
+            <tr class="hover:bg-gray-50">
+              <td class="p-3 border-b">Ali Rehman</td>
+              <td class="p-3 border-b">Technician</td>
+              <td class="p-3 border-b">$5000</td>
+              <td class="p-3 border-b">5%</td>
+              <td class="p-3 border-b">$250</td>
+              <td class="p-3 border-b">10%</td>
+              <td class="p-3 border-b">$500</td>
+              <td class="p-3 border-b"><span class="text-green-600">Active</span></td>
+              <td class="p-3 border-b">
+                <button class="text-blue-600 hover:underline mr-2 adjust-tax-btn" data-index="0">Adjust Tax</button>
+                <button class="text-red-600 hover:underline">Remove</button>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="p-3 border-b">Mohammad Saleem</td>
+              <td class="p-3 border-b">Driver</td>
+              <td class="p-3 border-b">$4000</td>
+              <td class="p-3 border-b">3%</td>
+              <td class="p-3 border-b">$120</td>
+              <td class="p-3 border-b">8%</td>
+              <td class="p-3 border-b">$320</td>
+              <td class="p-3 border-b"><span class="text-yellow-600">Standby</span></td>
+              <td class="p-3 border-b">
+                <button class="text-blue-600 hover:underline mr-2 adjust-tax-btn" data-index="1">Adjust Tax</button>
+                <button class="text-red-600 hover:underline">Remove</button>
+              </td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- CREDIT MANAGEMENT -->
+      <section id="credit" class="section hidden bg-white rounded-2xl shadow p-6 mb-6">
+        <h3 class="text-lg font-semibold mb-3">Credit Management</h3>
+        <form class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-sm text-gray-600 mb-1">Employee Name</label>
+            <input type="text" class="w-full border-gray-300 rounded-lg p-2 focus:ring focus:ring-blue-200" placeholder="Enter name">
+          </div>
+          <div>
+            <label class="block text-sm text-gray-600 mb-1">Credit Amount</label>
+            <input type="number" class="w-full border-gray-300 rounded-lg p-2 focus:ring focus:ring-blue-200" placeholder="Enter amount">
+          </div>
+          <div class="flex items-end">
+            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">Update Credit</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- NEW RECRUIT FORM -->
+      <section id="recruit" class="section hidden bg-white rounded-2xl shadow p-6 mb-6">
+        <h3 class="text-lg font-semibold mb-4">New Recruit Form</h3>
+        <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div><label class="block text-sm text-gray-600 mb-1">Employee Name</label><input type="text" class="w-full border rounded-lg p-2" /></div>
+          <div><label class="block text-sm text-gray-600 mb-1">Nationality</label><input type="text" class="w-full border rounded-lg p-2" /></div>
+          <div><label class="block text-sm text-gray-600 mb-1">Passport Number</label><input type="text" class="w-full border rounded-lg p-2" /></div>
+          <div><label class="block text-sm text-gray-600 mb-1">Passport Expiry</label><input type="date" class="w-full border rounded-lg p-2" /></div>
+          <div><label class="block text-sm text-gray-600 mb-1">Iqama Number</label><input type="text" class="w-full border rounded-lg p-2" /></div>
+          <div><label class="block text-sm text-gray-600 mb-1">Iqama Expiry</label><input type="date" class="w-full border rounded-lg p-2" /></div>
+          <div><label class="block text-sm text-gray-600 mb-1">Arrival Date</label><input type="date" class="w-full border rounded-lg p-2" /></div>
+          <div><label class="block text-sm text-gray-600 mb-1">Date of Birth</label><input type="date" class="w-full border rounded-lg p-2" /></div>
+          <div><label class="block text-sm text-gray-600 mb-1">WhatsApp Number</label><input type="text" class="w-full border rounded-lg p-2" /></div>
+          <div><label class="block text-sm text-gray-600 mb-1">Email (optional)</label><input type="email" class="w-full border rounded-lg p-2" /></div>
+          <div><label class="block text-sm text-gray-600 mb-1">Sponsor Company Name</label><input type="text" class="w-full border rounded-lg p-2" /></div>
+          <div><label class="block text-sm text-gray-600 mb-1">Profession</label><input type="text" class="w-full border rounded-lg p-2" /></div>
+          <div><label class="block text-sm text-gray-600 mb-1">Employee Type</label>
+            <select class="w-full border rounded-lg p-2">
+              <option>New Employee</option>
+              <option>Transfer from Another Company</option>
+            </select>
+          </div>
+          <div><label class="block text-sm text-gray-600 mb-1">Salary Total Allotted</label><input type="number" class="w-full border rounded-lg p-2" /></div>
+          <div><label class="block text-sm text-gray-600 mb-1">Qafeel Percentage</label><input type="number" class="w-full border rounded-lg p-2" /></div>
+          <div class="md:col-span-2 flex justify-end">
+            <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Submit</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- CAR RENTAL FORM -->
+      <section id="car" class="section hidden bg-white rounded-2xl shadow p-6 mb-6">
+        <h3 class="text-lg font-semibold mb-4">Car Rental Form</h3>
+        <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm text-gray-600 mb-1">Car Registration Number</label>
+            <input type="text" class="w-full border rounded-lg p-2" placeholder="Enter registration number">
+          </div>
+          <div>
+            <label class="block text-sm text-gray-600 mb-1">Company Name</label>
+            <input type="text" class="w-full border rounded-lg p-2" placeholder="Enter company name">
+          </div>
+          <div class="md:col-span-2 flex justify-end">
+            <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Add Car</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- BUILDING ACCOMMODATION -->
+      <section id="building" class="section hidden bg-white rounded-2xl shadow p-6 mb-6">
+        <h3 class="text-lg font-semibold mb-4">Building Accommodation</h3>
+
+        <div class="mb-4">
+          <label class="block text-sm text-gray-600 mb-1">Select Action</label>
+          <select id="buildingAction" class="w-full border rounded-lg p-2">
+            <option selected disabled>Choose Action...</option>
+            <option value="view">View Building Accommodation</option>
+            <option value="add">Add New Building</option>
+            <option value="remove">Remove Building</option>
+          </select>
+        </div>
+
+        <div id="actionContainer"></div>
+      </section>
+
+      <!-- TAX DEDUCTION -->
+      <section id="tax" class="section hidden bg-white rounded-2xl shadow p-6 mb-6">
+        <h3 class="text-lg font-semibold mb-4">Tax Deduction</h3>
+        <form id="taxForm" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-sm text-gray-600 mb-1">Select Employee</label>
+            <select id="employeeSelect" class="w-full border rounded-lg p-2">
+              <option selected disabled>Choose Employee...</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm text-gray-600 mb-1">VAT Percentage</label>
+            <input type="number" id="vatPercentage" class="w-full border rounded-lg p-2" placeholder="e.g., 5" min="0" max="100">
+          </div>
+          <div class="flex items-end">
+            <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700">Deduct Tax</button>
+          </div>
+        </form>
+        <div id="taxResult" class="mt-4"></div>
+      </section>
+
+
+
+    </main>
+  </div>
+
+  <!-- Add Employee Modal -->
+  <div id="addEmployeeModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg p-6 w-full max-w-md">
+      <h3 class="text-lg font-semibold mb-4">Add New Employee</h3>
+      <form id="addEmployeeForm">
+        <div class="mb-4">
+          <label class="block text-sm text-gray-600 mb-1">Employee Name</label>
+          <input type="text" id="newEmpName" class="w-full border rounded-lg p-2" required>
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm text-gray-600 mb-1">Position</label>
+          <input type="text" id="newEmpPosition" class="w-full border rounded-lg p-2" required>
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm text-gray-600 mb-1">Salary</label>
+          <input type="number" id="newEmpSalary" class="w-full border rounded-lg p-2" required>
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm text-gray-600 mb-1">Extra Tax (%)</label>
+          <input type="number" id="newEmpTax" class="w-full border rounded-lg p-2" min="0" max="100" required>
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm text-gray-600 mb-1">VAT (%)</label>
+          <input type="number" id="newEmpVat" class="w-full border rounded-lg p-2" min="0" max="100" required>
+        </div>
+        <div class="flex justify-end space-x-2">
+          <button type="button" id="cancelAddEmp" class="px-4 py-2 bg-gray-300 rounded-lg">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-lg">Add Employee</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Adjust Tax Modal -->
+  <div id="adjustTaxModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg p-6 w-full max-w-md">
+      <h3 class="text-lg font-semibold mb-4">Adjust Extra </h3>
+      <form id="adjustTaxForm">
+        <div class="mb-4">
+          <label class="block text-sm text-gray-600 mb-1">Employee Name</label>
+          <input type="text" id="adjustEmpName" class="w-full border rounded-lg p-2 bg-gray-100" readonly>
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm text-gray-600 mb-1">Current Extra  (%)</label>
+          <input type="number" id="currentTax" class="w-full border rounded-lg p-2 bg-gray-100" readonly>
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm text-gray-600 mb-1">New Extra  (%)</label>
+          <input type="number" id="newTax" class="w-full border rounded-lg p-2" min="0" max="100" required>
+        </div>
+        <div class="flex justify-end space-x-2">
+          <button type="button" id="cancelAdjustTax" class="px-4 py-2 bg-gray-300 rounded-lg">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-lg">Update Tax</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Check login
+    if (!localStorage.getItem('loggedIn') || localStorage.getItem('role') !== 'mainadmin') {
+      window.location.href = 'login.html';
+    }
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
+
+    // Sidebar Navigation
+    const buttons = document.querySelectorAll("aside button[data-section]");
+    const sections = document.querySelectorAll(".section");
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        sections.forEach(sec => sec.classList.add("hidden"));
+        document.getElementById(btn.dataset.section).classList.remove("hidden");
+      });
+    });
+
+    // ================= EMPLOYEE DATA =================
+    let employees = [
+      {name: "Ali Rehman", position: "Technician", salary: 5000, status: "Active", extra: 5, vat: 10},
+      {name: "Mohammad Saleem", position: "Driver", salary: 4000, status: "Standby", extra: 3, vat: 8}
+    ];
+
+    // ================= EMPLOYEE MANAGEMENT JS =================
+    function renderEmployeeTable() {
+      const tbody = document.getElementById("employeeTableBody");
+      tbody.innerHTML = "";
+      employees.forEach((emp, index) => {
+        const taxAmount = (emp.salary * emp.extra) / 100;
+        const vatAmount = (emp.salary * emp.vat) / 100;
+        const row = document.createElement("tr");
+        row.className = "hover:bg-gray-50";
+        row.innerHTML = `
+          <td class="p-3 border-b">${emp.name}</td>
+          <td class="p-3 border-b">${emp.position}</td>
+          <td class="p-3 border-b">$${emp.salary}</td>
+          <td class="p-3 border-b">${emp.extra}%</td>
+          <td class="p-3 border-b">$${taxAmount.toFixed(2)}</td>
+          <td class="p-3 border-b">${emp.vat}%</td>
+          <td class="p-3 border-b">$${vatAmount.toFixed(2)}</td>
+          <td class="p-3 border-b"><span class="text-${emp.status === 'Active' ? 'green' : 'yellow'}-600">${emp.status}</span></td>
+          <td class="p-3 border-b">
+            <button class="text-blue-600 hover:underline mr-2 adjust-tax-btn" data-index="${index}">Adjust Extras</button>
+            <button class="text-red-600 hover:underline remove-emp-btn" data-index="${index}">Remove</button>
+          </td>
+        `;
+        tbody.appendChild(row);
+      });
+    }
+
+    function addEmployee(name, position, salary, extra, vat) {
+      employees.push({name, position, salary: parseInt(salary), status: "Active", extra: parseInt(extra), vat: parseInt(vat)});
+      renderEmployeeTable();
+      populateEmployeeSelect();
+    }
+
+    function adjustTax(index, newTax) {
+      employees[index].extra = parseInt(newTax);
+      renderEmployeeTable();
+    }
+
+    function removeEmployee(index) {
+      employees.splice(index, 1);
+      renderEmployeeTable();
+      populateEmployeeSelect();
+    }
+
+    // Modal controls
+    document.getElementById("addEmployeeBtn").addEventListener("click", () => {
+      document.getElementById("addEmployeeModal").classList.remove("hidden");
+    });
+
+    document.getElementById("cancelAddEmp").addEventListener("click", () => {
+      document.getElementById("addEmployeeModal").classList.add("hidden");
+      document.getElementById("addEmployeeForm").reset();
+    });
+
+    document.getElementById("cancelAdjustTax").addEventListener("click", () => {
+      document.getElementById("adjustTaxModal").classList.add("hidden");
+      document.getElementById("adjustTaxForm").reset();
+    });
+
+    // Form submissions
+    document.getElementById("addEmployeeForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("newEmpName").value;
+      const position = document.getElementById("newEmpPosition").value;
+      const salary = document.getElementById("newEmpSalary").value;
+      const extra = document.getElementById("newEmpTax").value;
+      const vat = document.getElementById("newEmpVat").value;
+      addEmployee(name, position, salary, extra, vat);
+      document.getElementById("addEmployeeModal").classList.add("hidden");
+      document.getElementById("addEmployeeForm").reset();
+    });
+
+    document.getElementById("adjustTaxForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const index = parseInt(document.getElementById("adjustTaxForm").dataset.index);
+      const newTax = document.getElementById("newTax").value;
+      adjustTax(index, newTax);
+      document.getElementById("adjustTaxModal").classList.add("hidden");
+      document.getElementById("adjustTaxForm").reset();
+    });
+
+    // Adjust tax button clicks
+    document.addEventListener("click", (e) => {
+      if (e.target.classList.contains("adjust-tax-btn")) {
+        const index = parseInt(e.target.dataset.index);
+        const emp = employees[index];
+        document.getElementById("adjustEmpName").value = emp.name;
+        document.getElementById("currentTax").value = emp.extra;
+        document.getElementById("adjustTaxForm").dataset.index = index;
+        document.getElementById("adjustTaxModal").classList.remove("hidden");
+      }
+      if (e.target.classList.contains("remove-emp-btn")) {
+        const index = parseInt(e.target.dataset.index);
+        if (confirm("Are you sure you want to remove this employee?")) {
+          removeEmployee(index);
+        }
+      }
+    });
+
+    // Initialize employee table
+    document.addEventListener("DOMContentLoaded", () => {
+      renderEmployeeTable();
+    });
+
+    // ================= TAX JS =================
+    function populateEmployeeSelect() {
+      const select = document.getElementById("employeeSelect");
+      select.innerHTML = '<option selected disabled>Choose Employee...</option>';
+      employees.forEach(emp => {
+        const option = document.createElement("option");
+        option.value = emp.name;
+        option.textContent = emp.name;
+        select.appendChild(option);
+      });
+    }
+
+    function calculateTax(employeeName, vatPercentage) {
+      const employee = employees.find(emp => emp.name === employeeName);
+      if (!employee) return null;
+      const taxAmount = (employee.salary * vatPercentage) / 100;
+      return { employee, taxAmount, netSalary: employee.salary - taxAmount };
+    }
+
+    // Initialize tax section
+    document.addEventListener("DOMContentLoaded", () => {
+      populateEmployeeSelect();
+      const taxForm = document.getElementById("taxForm");
+      if (taxForm) {
+        taxForm.addEventListener("submit", e => {
+          e.preventDefault();
+          const employeeName = document.getElementById("employeeSelect").value;
+          const vatPercentage = parseFloat(document.getElementById("vatPercentage").value);
+          const result = calculateTax(employeeName, vatPercentage);
+          const resultDiv = document.getElementById("taxResult");
+          if (result) {
+            resultDiv.innerHTML = `
+              <div class="bg-gray-100 p-4 rounded-lg">
+                <h4 class="font-semibold">Tax Deduction Result</h4>
+                <p>Employee: ${result.employee.name}</p>
+                <p>Original Salary: $${result.employee.salary}</p>
+                <p>Tax Amount (${vatPercentage}%): $${result.taxAmount.toFixed(2)}</p>
+                <p>Net Salary: $${result.netSalary.toFixed(2)}</p>
+              </div>
+            `;
+          } else {
+            resultDiv.innerHTML = `<p class="text-red-600">Employee not found.</p>`;
+          }
+        });
+      }
+    });
+
+    // ================= BUILDING JS =================
+    const buildings = {
+      "Building A": {location: "Riyadh", totalRooms: 6, rooms: Array.from({length:6}, (_, i)=>({number:i+1, occupied: Math.floor(Math.random()*5)}))},
+      "Building B": {location: "Dammam", totalRooms: 4, rooms: Array.from({length:4}, (_, i)=>({number:i+1, occupied: Math.floor(Math.random()*5)}))}
+    };
+
+    const actionContainer = document.getElementById("actionContainer");
+    const buildingAction = document.getElementById("buildingAction");
+
+    if (buildingAction) {
+      buildingAction.addEventListener("change", e => {
+        const action = e.target.value;
+        actionContainer.innerHTML = "";
+        if(action === "view") showBuildingSelection();
+        else if(action === "add") showAddBuildingForm();
+        else if(action === "remove") showRemoveBuilding();
+      });
+    }
+
+    function showBuildingSelection() {
+      let html = `<label class="block text-sm text-gray-600 mb-1">Select Building</label>
+        <select id="buildingSelect" class="w-full border rounded-lg p-2 mb-4">
+          <option selected disabled>Choose Building...</option>`;
+      for(let b in buildings) html += `<option value="${b}">${b}</option>`;
+      html += `</select><div id="roomsContainer" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>`;
+      actionContainer.innerHTML = html;
+      document.getElementById("buildingSelect").addEventListener("change", e => showBuilding(e.target.value));
+    }
+
+    function showBuilding(name) {
+      const building = buildings[name];
+      const container = document.getElementById("roomsContainer");
+      container.innerHTML = "";
+      building.rooms.forEach(room => {
+        const roomDiv = document.createElement("div");
+        roomDiv.className = "p-4 border rounded-lg text-center";
+        if(room.occupied >= 4) roomDiv.classList.add("opacity-50");
+        roomDiv.innerHTML = `
+          <p class="font-medium">Room ${room.number}</p>
+          <p>Occupied: ${room.occupied}/4</p>`;
+        container.appendChild(roomDiv);
+      });
+    }
+
+    function showAddBuildingForm() {
+      actionContainer.innerHTML = `
+        <form id="addBuildingForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div><label class="block text-sm text-gray-600 mb-1">Building Name</label><input type="text" id="newBuildingName" class="w-full border rounded-lg p-2"></div>
+          <div><label class="block text-sm text-gray-600 mb-1">Location</label><input type="text" id="newBuildingLocation" class="w-full border rounded-lg p-2"></div>
+          <div><label class="block text-sm text-gray-600 mb-1">Total Rooms</label><input type="number" id="newBuildingRooms" class="w-full border rounded-lg p-2"></div>
+          <div class="flex items-end"><button class="bg-blue-700 text-white px-4 py-2 rounded-lg">Add Building</button></div>
+        </form>`;
+      document.getElementById("addBuildingForm").addEventListener("submit", e=>{
+        e.preventDefault();
+        const name = document.getElementById("newBuildingName").value;
+        const loc = document.getElementById("newBuildingLocation").value;
+        const total = parseInt(document.getElementById("newBuildingRooms").value);
+        buildings[name] = {location: loc, totalRooms: total, rooms: Array.from({length: total}, (_, i)=>({number:i+1, occupied:0}))};
+        alert(`Building "${name}" added successfully!`);
+        actionContainer.innerHTML = "";
+        buildingAction.value = "view";
+        showBuildingSelection();
+      });
+    }
+
+    function showRemoveBuilding() {
+      let html = `<label class="block text-sm text-gray-600 mb-1">Select Building to Remove</label>
+        <select id="removeBuildingSelect" class="w-full border rounded-lg p-2 mb-4">
+          <option selected disabled>Choose Building...</option>`;
+      for(let b in buildings) html += `<option value="${b}">${b}</option>`;
+      html += `</select><button class="bg-red-600 text-white px-4 py-2 rounded-lg">Remove Building</button>`;
+      actionContainer.innerHTML = html;
+
+      document.querySelector("#actionContainer button").addEventListener("click", ()=>{
+        const name = document.getElementById("removeBuildingSelect").value;
+        if(!name) return alert("Select a building");
+        delete buildings[name];
+        alert(`Building "${name}" removed successfully!`);
+        actionContainer.innerHTML = "";
+        buildingAction.value = "view";
+        showBuildingSelection();
+      });
+    }
+
+
+  </script>
+</body>
+</html>

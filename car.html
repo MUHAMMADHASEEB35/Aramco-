@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Rental | ARAMCO</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-blue-900 text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Car Rental Management - ARAMCO</h1>
+      <button class="bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded-lg text-sm">Back to Dashboard</button>
+    </div>
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav class="bg-blue-800 text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-2">
+      <div class="flex justify-between items-center">
+        <div class="hidden md:flex space-x-4">
+           <!-- <a href="SUPR.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Super Admin</a> -->
+          <a href="main.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Main Admin</a>
+          <!-- <a href="supply.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Supply Admin</a> -->
+          <!-- <a href="account.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Account Admin</a> -->
+          <a href="employee.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Employee</a>
+          <!-- <a href="roomcoordinator.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Room Coordinator</a> -->
+          <a href="empregestration.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Emp Registration</a>
+          <a href="car.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Car Rental</a>
+          <!-- <a href="navigation.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Navigation</a> -->
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-white focus:outline-none hover:bg-blue-700 p-2 rounded">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden mt-2 space-y-1">
+        <!-- <a href="SUPR.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Super Admin</a> -->
+        <a href="main.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Main Admin</a>
+        <!-- <a href="supply.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Supply Admin</a> -->
+        <!-- <a href="account.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Account Admin</a> -->
+        <!-- <a href="employee.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Employee</a> -->
+        <!-- <a href="roomcoordinator.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Room Coordinator</a> -->
+        <a href="empregestration.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Emp Registration</a>
+        <a href="car.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Car Rental</a>
+        <!-- <a href="index.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Learning Assure</a> -->
+        <!-- <a href="navigation.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Navigation</a> -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Form -->
+  <main class="max-w-4xl mx-auto p-6 mt-6 bg-white shadow-lg rounded-2xl">
+    <h2 class="text-2xl font-semibold mb-6 text-blue-800">Add New Car Rental</h2>
+
+    <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <!-- Car Registration Number -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">Car Registration Number</label>
+        <input type="text" placeholder="Enter car registration number" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Company Name -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">Company Name</label>
+        <input type="text" placeholder="Enter company name" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Driver Name -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">Driver Name</label>
+        <input type="text" placeholder="Enter driver name (optional)" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Rental Date -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">Rental Start Date</label>
+        <input type="date" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Return Date -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">Return Date</label>
+        <input type="date" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Rental Amount -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">Rental Amount (SAR)</label>
+        <input type="number" placeholder="Enter total amount" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Payment Status -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">Payment Status</label>
+        <select class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+          <option selected>Pending</option>
+          <option>Paid</option>
+        </select>
+      </div>
+
+      <!-- Upload Rental Agreement -->
+      <div class="md:col-span-2">
+        <label class="block text-sm font-medium text-gray-600 mb-1">Upload Rental Agreement (optional)</label>
+        <input type="file" class="w-full border rounded-lg p-2 bg-gray-50">
+      </div>
+
+      <!-- Notes -->
+      <div class="md:col-span-2">
+        <label class="block text-sm font-medium text-gray-600 mb-1">Notes / Comments</label>
+        <textarea rows="3" placeholder="Add any additional details..." class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="md:col-span-2 flex justify-end">
+        <button class="bg-blue-700 text-white px-8 py-3 rounded-lg hover:bg-blue-800">Save Rental Record</button>
+      </div>
+
+    </form>
+  </main>
+</body>
+</html>

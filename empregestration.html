@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Registration | ARAMCO</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-blue-900 text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Employee Registration - ARAMCO</h1>
+      <button class="bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded-lg text-sm">Back to Dashboard</button>
+    </div>
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav class="bg-blue-800 text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-2">
+      <div class="flex justify-between items-center">
+        <div class="hidden md:flex space-x-4">
+          <!-- <a href="SUPR.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Super Admin</a> -->
+          <a href="main.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Main Admin</a>
+          <!-- <a href="supply.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Supply Admin</a> -->
+          <!-- <a href="account.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Account Admin</a> -->
+          <a href="employee.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Employee</a>
+          <!-- <a href="roomcoordinator.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Room Coordinator</a> -->
+          <a href="empregestration.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Emp Registration</a>
+          <a href="car.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Car Rental</a>
+          <!-- <a href="navigation.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Navigation</a> -->
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-white focus:outline-none hover:bg-blue-700 p-2 rounded">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden mt-2 space-y-1">
+        <!-- <a href="SUPR.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Super Admin</a> -->
+        <a href="main.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Main Admin</a>
+        <!-- <a href="supply.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Supply Admin</a> -->
+        <!-- <a href="account.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Account Admin</a> -->
+        <!-- <a href="employee.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Employee</a> -->
+        <!-- <a href="roomcoordinator.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Room Coordinator</a> -->
+        <a href="empregestration.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Emp Registration</a>
+        <a href="car.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Car Rental</a>
+        <!-- <a href="index.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Learning Assure</a> -->
+        <!-- <a href="navigation.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Navigation</a> -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Form -->
+  <main class="max-w-5xl mx-auto p-6 mt-6 bg-white shadow-lg rounded-2xl">
+    <h2 class="text-2xl font-semibold mb-6 text-blue-800">New Employee Registration Form</h2>
+
+    <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Name -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">Employee Name</label>
+        <input type="text" placeholder="Enter employee name" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Nationality -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">Nationality</label>
+        <input type="text" placeholder="Enter nationality" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Passport Number -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">Passport Number</label>
+        <input type="text" placeholder="Enter passport number" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Passport Expiry -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">Passport Expiry</label>
+        <input type="date" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Iqama Number -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">Iqama Number</label>
+        <input type="text" placeholder="Enter iqama number" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Iqama Expiry -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">Iqama Expiry</label>
+        <input type="date" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Arrival Date -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">Arrival Date</label>
+        <input type="date" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Date of Birth -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">Date of Birth</label>
+        <input type="date" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- WhatsApp Number -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">WhatsApp Number</label>
+        <input type="tel" placeholder="e.g. +966 50 123 4567" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Email (optional) -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">Email (Optional)</label>
+        <input type="email" placeholder="example@email.com" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Sponsor Company Name -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">Sponsor Company Name</label>
+        <input type="text" placeholder="Enter sponsor company name" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Profession -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">Profession</label>
+        <input type="text" placeholder="Enter employee profession" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Type: New or Transfer -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">Employee Type</label>
+        <select class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+          <option selected disabled>Choose...</option>
+          <option>New Employee</option>
+          <option>Transfer from Another Company</option>
+        </select>
+      </div>
+
+      <!-- Salary -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">Salary (Total Allotted)</label>
+        <input type="number" placeholder="Enter salary amount" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Qafeel Percentage -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">Qafeel Percentage (%)</label>
+        <input type="number" placeholder="Enter qafeel percentage" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Submit Button -->
+      <div class="md:col-span-2 flex justify-end">
+        <button class="bg-blue-700 text-white px-8 py-3 rounded-lg hover:bg-blue-800">Register Employee</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

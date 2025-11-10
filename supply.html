@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supply Admin | ARAMCO</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-blue-900 text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">ARAMCO Supply Admin Panel</h1>
+      <button class="bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded-lg text-sm">Logout</button>
+    </div>
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav class="bg-blue-800 text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-2">
+      <div class="flex justify-between items-center">
+        <div class="hidden md:flex space-x-4">
+           <!-- <a href="SUPR.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Super Admin</a> -->
+          <!-- <a href="main.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Main Admin</a> -->
+          <a href="supply.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Supply Admin</a>
+          <!-- <a href="account.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Account Admin</a> -->
+          <!-- <a href="employee.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Employee</a> -->
+          <!-- <a href="roomcoordinator.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Room Coordinator</a> -->
+          <!-- <a href="empregestration.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Emp Registration</a> -->
+          <!-- <a href="car.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Car Rental</a> -->
+          <!-- <a href="navigation.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Navigation</a> -->
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-white focus:outline-none hover:bg-blue-700 p-2 rounded">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden mt-2 space-y-1">
+        <!-- <a href="SUPR.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Super Admin</a> -->
+        <!-- <a href="main.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Main Admin</a> -->
+        <a href="supply.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Supply Admin</a>
+        <!-- <a href="account.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Account Admin</a> -->
+        <!-- <a href="employee.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Employee</a> -->
+        <!-- <a href="roomcoordinator.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Room Coordinator</a> -->
+        <!-- <a href="empregestration.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Emp Registration</a> -->
+        <!-- <a href="car.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Car Rental</a> -->
+        <!-- <a href="index.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Learning Assure</a> -->
+        <!-- <a href="navigation.html" class="block hover:bg-blue-700 px-3 py-2 rounded transition duration-200">Navigation</a> -->
+      </div>
+    </div>
+  </nav>
+
+  <div class="flex">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow-lg h-screen p-5 hidden md:block">
+      <nav class="space-y-2">
+        <h2 class="text-gray-600 font-semibold mb-3">Supply Admin Menu</h2>
+        <a href="#" class="block px-3 py-2 rounded-lg hover:bg-blue-100">Dashboard</a>
+        <a href="#" class="block px-3 py-2 rounded-lg hover:bg-blue-100">Manage Employees</a>
+        <a href="#" class="block px-3 py-2 rounded-lg hover:bg-blue-100">Allot / Borrow Employees</a>
+        <a href="#" class="block px-3 py-2 rounded-lg hover:bg-blue-100">Reports</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6 overflow-y-auto">
+      <h2 class="text-2xl font-semibold mb-4">Supply Admin Dashboard</h2>
+
+      <!-- Dashboard Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div class="bg-white p-4 rounded-2xl shadow">
+          <h3 class="text-gray-600">Active Employees</h3>
+          <p class="text-2xl font-bold text-green-600">87</p>
+        </div>
+        <div class="bg-white p-4 rounded-2xl shadow">
+          <h3 class="text-gray-600">On Standby</h3>
+          <p class="text-2xl font-bold text-yellow-600">15</p>
+        </div>
+        <div class="bg-white p-4 rounded-2xl shadow">
+          <h3 class="text-gray-600">Released</h3>
+          <p class="text-2xl font-bold text-red-600">6</p>
+        </div>
+      </div>
+
+      <!-- Employee Status Management -->
+      <section class="bg-white rounded-2xl shadow p-6 mb-6">
+        <div class="flex justify-between items-center mb-3">
+          <h3 class="text-lg font-semibold">Manage Employee Status</h3>
+          <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Add Employee</button>
+        </div>
+
+        <table class="w-full text-left border-collapse">
+          <thead class="bg-gray-100">
+            <tr>
+              <th class="p-3 border-b">Name</th>
+              <th class="p-3 border-b">Company</th>
+              <th class="p-3 border-b">Position</th>
+              <th class="p-3 border-b">Status</th>
+              <th class="p-3 border-b">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-gray-50">
+              <td class="p-3 border-b">Ahmed Ali</td>
+              <td class="p-3 border-b">ARAMCO</td>
+              <td class="p-3 border-b">Welder</td>
+              <td class="p-3 border-b"><span class="text-green-600 font-semibold">Active</span></td>
+              <td class="p-3 border-b">
+                <select class="border rounded-lg p-1">
+                  <option>Active</option>
+                  <option>Release</option>
+                  <option>Standby</option>
+                </select>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="p-3 border-b">Omar Khalid</td>
+              <td class="p-3 border-b">ARAMCO</td>
+              <td class="p-3 border-b">Helper</td>
+              <td class="p-3 border-b"><span class="text-yellow-600 font-semibold">Standby</span></td>
+              <td class="p-3 border-b">
+                <select class="border rounded-lg p-1">
+                  <option>Active</option>
+                  <option selected>Standby</option>
+                  <option>Release</option>
+                </select>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="p-3 border-b">Naeem Uddin</td>
+              <td class="p-3 border-b">ARAMCO</td>
+              <td class="p-3 border-b">Driver</td>
+              <td class="p-3 border-b"><span class="text-red-600 font-semibold">Released</span></td>
+              <td class="p-3 border-b">
+                <select class="border rounded-lg p-1">
+                  <option>Active</option>
+                  <option>Standby</option>
+                  <option selected>Release</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Allot / Borrow Employee -->
+      <section class="bg-white rounded-2xl shadow p-6">
+        <h3 class="text-lg font-semibold mb-4">Allot or Borrow Employee</h3>
+        <form class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-sm text-gray-600 mb-1">Employee Name</label>
+            <input type="text" class="w-full border rounded-lg p-2" placeholder="Enter employee name">
+          </div>
+          <div>
+            <label class="block text-sm text-gray-600 mb-1">Action Type</label>
+            <select class="w-full border rounded-lg p-2">
+              <option>Allot to Other Company</option>
+              <option>Borrow from Another Company</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm text-gray-600 mb-1">Company Name</label>
+            <input type="text" class="w-full border rounded-lg p-2" placeholder="Enter company name">
+          </div>
+          <div class="md:col-span-3 flex justify-end">
+            <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Submit</button>
+          </div>
+        </form>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
+  </script>
+</body>
+</html>

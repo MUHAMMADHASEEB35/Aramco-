@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARAMCO Management System</title>
+  <script>
+    // Redirect to login if not logged in
+    if (!localStorage.getItem('loggedIn')) {
+      window.location.href = 'login.html';
+    } else {
+      // Redirect based on role
+      const role = localStorage.getItem('role');
+      let redirectPage;
+      switch(role) {
+        case 'superadmin': redirectPage = 'SUPR.html'; break;
+        case 'mainadmin': redirectPage = 'main.html'; break;
+        case 'accountadmin': redirectPage = 'account.html'; break;
+        case 'supplyadmin': redirectPage = 'supply.html'; break;
+        case 'roomcoordinator': redirectPage = 'roomcoordinator.html'; break;
+        case 'employee': redirectPage = 'employee.html'; break;
+        default: redirectPage = 'navigation.html';
+      }
+      window.location.href = redirectPage;
+    }
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
